@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -37,29 +37,94 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <div style="background-color: #4b6c9e; height: 240px; color: white; overflow: hidden">
+            <div style="height: 60px; line-height: 60px; text-align: center; font-size: 22px">
+                Proiect ASP.NET Aplicatie SALARIZARE - George MIHALCA
+            </div>
+            <div style="overflow: auto">
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+                <div style="float: left; width: 32%; text-align: center">
+                    <img src="Images/Jellyfish.jpg" style="width: 190px" />
+                </div>
+                <div style="float: left; width: 36%; text-align: center; height: 145px; line-height: 150px;">
+                    <%: DateTime.Now %>
+                </div>
+                <div style="float: left; width: 32%; text-align: center">
+                    <img src="Images/Penguins.jpg" style="width: 190px" />
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+<%--                <a class="navbar-brand" href="#">Brand</a>--%>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="xxxactive"><a href="Home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Introducere date <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ActualizareDate.aspx">Actualizare date</a></li>
+                            <li><a href="AdaugareAngajati.aspx">Adaugare angajati</a></li>
+                            <li><a href="StergereAngajati.aspx">Stergere angajati</a></li>
+                            <li><a href="CalculSalarii.aspx">Calcul salarii</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tiparire<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="StatPlata.aspx">Stat plata</a></li>
+                            <li><a href="Fluturasi.aspx">Fluturasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ModificareProcente.aspx">Modifica Procente</a></li>
+                </ul>
+<%--                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>--%>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <%--        <div class="navbar xxxnavbar-inverse navbar-default xxxnavbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                     </button>
-                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Bold="True" Font-Size="Larger">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Home"></asp:MenuItem>
-                        <asp:MenuItem Text="Introducere date&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="IntroducereDate" NavigateUrl="~/IntroducereDate.aspx">
-                            <asp:MenuItem NavigateUrl="~/ActualizareDate.aspx" Text="Actualizare date" Value="ActualizareDate"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/AdaugareAngajati.aspx" Text="Adaugare angajati" Value="AdaugareAngajati"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/StergereAngajati.aspx" Text="Stergere angajati" Value="StergereAngajati"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CalculSalarii.aspx" Text="Calcul salarii" Value="CalculSalarii"></asp:MenuItem>
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Tiparire.aspx" Text="Tiparire&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Tiparire">
-                            <asp:MenuItem NavigateUrl="~/StatPlata.aspx" Text="Stat plata" Value="StatPlata"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Fluturasi.aspx" Text="Fluturasi" Value="Fluturasi"></asp:MenuItem>
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/ModificareProcente.aspx" Text="Modificare procente&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="ModificareProcente"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Bold="True" Font-Size="Larger">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Introducere date&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="IntroducereDate" NavigateUrl="~/IntroducereDate.aspx">
+                                <asp:MenuItem NavigateUrl="~/ActualizareDate.aspx" Text="Actualizare date" Value="ActualizareDate"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AdaugareAngajati.aspx" Text="Adaugare angajati" Value="AdaugareAngajati"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/StergereAngajati.aspx" Text="Stergere angajati" Value="StergereAngajati"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CalculSalarii.aspx" Text="Calcul salarii" Value="CalculSalarii"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Tiparire.aspx" Text="Tiparire&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Tiparire">
+                                <asp:MenuItem NavigateUrl="~/StatPlata.aspx" Text="Stat plata" Value="StatPlata"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Fluturasi.aspx" Text="Fluturasi" Value="Fluturasi"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ModificareProcente.aspx" Text="Modificare procente&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="ModificareProcente"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
                 </div>
                 <div class="navbar-collapse collapse">
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -80,10 +145,14 @@
                     </asp:LoginView>
                 </div>
             </div>
-        </div>
+        </div>--%>
+        <%--        <div style="background-color: blue; height: 170px; color: white;">
+        </div>--%>
         <div class="container body-content">
+
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
