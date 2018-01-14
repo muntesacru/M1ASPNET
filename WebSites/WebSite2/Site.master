@@ -49,9 +49,15 @@
                         <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Home"></asp:MenuItem>
                         <asp:MenuItem Text="Introducere date&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="IntroducereDate" NavigateUrl="~/IntroducereDate.aspx">
                             <asp:MenuItem NavigateUrl="~/ActualizareDate.aspx" Text="Actualizare date" Value="ActualizareDate"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Adaugare.aspx" Text="Adaugare" Value="Adaugare"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Stergere.aspx" Text="Stergere" Value="Stergere"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdaugareAngajati.aspx" Text="Adaugare angajati" Value="AdaugareAngajati"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/StergereAngajati.aspx" Text="Stergere angajati" Value="StergereAngajati"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CalculSalarii.aspx" Text="Calcul salarii" Value="CalculSalarii"></asp:MenuItem>
                         </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Tiparire.aspx" Text="Tiparire&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="Tiparire">
+                            <asp:MenuItem NavigateUrl="~/StatPlata.aspx" Text="Stat plata" Value="StatPlata"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Fluturasi.aspx" Text="Fluturasi" Value="Fluturasi"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ModificareProcente.aspx" Text="Modificare procente&amp;nbsp;&amp;nbsp;&amp;nbsp;" Value="ModificareProcente"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
                 </div>
