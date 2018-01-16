@@ -38,31 +38,10 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
         ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-        SelectCommand="SELECT * FROM &quot;ANGAJATI&quot; WHERE (&quot;NRCRT&quot; = :NRCRT1)" UpdateCommand="UPDATE &quot;ANGAJATI&quot; SET &quot;NUME&quot; = :NUME, &quot;PRENUME&quot; = :PRENUME, &quot;FUNCTIE&quot; = :FUNCTIE, &quot;SALARNEGOCIAT&quot; = :SALARNEGOCIAT, &quot;SALARREALIZAT&quot; = :SALARREALIZAT, &quot;VECHIME&quot; = :VECHIME, &quot;SPOR&quot; = :SPOR, &quot;PREMIIBRUTE&quot; = :PREMIIBRUTE, &quot;COMPENSATIE&quot; = :COMPENSATIE, &quot;TOTALBRUT&quot; = :TOTALBRUT, &quot;BRUTIMPOZABIL&quot; = :BRUTIMPOZABIL, &quot;IMPOZIT&quot; = :IMPOZIT, &quot;CAS&quot; = :CAS, &quot;SOMAJ&quot; = :SOMAJ, &quot;SANATATE&quot; = :SANATATE, &quot;AVANS&quot; = :AVANS, &quot;RETINERI&quot; = :RETINERI, &quot;RESTPLATA&quot; = :RESTPLATA WHERE &quot;NRCRT&quot; = :NRCRT">
+        SelectCommand="SELECT * FROM &quot;ANGAJATI&quot; WHERE (&quot;NRCRT&quot; &gt; :Nrcrt1)">
         <SelectParameters>
-            <asp:ControlParameter ControlID="tbNrCrt" Name="NrCrt1" PropertyName="Text" Type="Decimal" DefaultValue="0" />
+            <asp:ControlParameter ControlID="tbNrCrt" Name="NRCRT" PropertyName="Text" Type="Decimal" DefaultValue="0" />
         </SelectParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="NUME" Type="String" />
-            <asp:Parameter Name="PRENUME" Type="String" />
-            <asp:Parameter Name="FUNCTIE" Type="String" />
-            <asp:Parameter Name="SALARNEGOCIAT" Type="Decimal" />
-            <asp:Parameter Name="SALARREALIZAT" Type="Decimal" />
-            <asp:Parameter Name="VECHIME" Type="Decimal" />
-            <asp:Parameter Name="SPOR" Type="Decimal" />
-            <asp:Parameter Name="PREMIIBRUTE" Type="Decimal" />
-            <asp:Parameter Name="COMPENSATIE" Type="Decimal" />
-            <asp:Parameter Name="TOTALBRUT" Type="Decimal" />
-            <asp:Parameter Name="BRUTIMPOZABIL" Type="Decimal" />
-            <asp:Parameter Name="IMPOZIT" Type="Decimal" />
-            <asp:Parameter Name="CAS" Type="Decimal" />
-            <asp:Parameter Name="SOMAJ" Type="Decimal" />
-            <asp:Parameter Name="SANATATE" Type="Decimal" />
-            <asp:Parameter Name="AVANS" Type="Decimal" />
-            <asp:Parameter Name="RETINERI" Type="Decimal" />
-            <asp:Parameter Name="RESTPLATA" Type="Decimal" />
-            <asp:Parameter Name="NRCRT" Type="Decimal" />
-        </UpdateParameters>
     </asp:SqlDataSource>
 
     <table style="width: 100%;">
