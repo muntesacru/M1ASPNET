@@ -35,7 +35,10 @@
             <asp:BoundField DataField="RESTPLATA" HeaderText="RESTPLATA" SortExpression="RESTPLATA" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;ANGAJATI&quot; WHERE (&quot;NRCRT&quot; = :NRCRT1)" UpdateCommand="UPDATE &quot;ANGAJATI&quot; SET &quot;NUME&quot; = :NUME, &quot;PRENUME&quot; = :PRENUME, &quot;FUNCTIE&quot; = :FUNCTIE, &quot;SALARNEGOCIAT&quot; = :SALARNEGOCIAT, &quot;SALARREALIZAT&quot; = :SALARREALIZAT, &quot;VECHIME&quot; = :VECHIME, &quot;SPOR&quot; = :SPOR, &quot;PREMIIBRUTE&quot; = :PREMIIBRUTE, &quot;COMPENSATIE&quot; = :COMPENSATIE, &quot;TOTALBRUT&quot; = :TOTALBRUT, &quot;BRUTIMPOZABIL&quot; = :BRUTIMPOZABIL, &quot;IMPOZIT&quot; = :IMPOZIT, &quot;CAS&quot; = :CAS, &quot;SOMAJ&quot; = :SOMAJ, &quot;SANATATE&quot; = :SANATATE, &quot;AVANS&quot; = :AVANS, &quot;RETINERI&quot; = :RETINERI, &quot;RESTPLATA&quot; = :RESTPLATA WHERE &quot;NRCRT&quot; = :NRCRT">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+        ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+        SelectCommand="SELECT * FROM &quot;ANGAJATI&quot; WHERE (&quot;NRCRT&quot; = :NRCRT1)" UpdateCommand="UPDATE &quot;ANGAJATI&quot; SET &quot;NUME&quot; = :NUME, &quot;PRENUME&quot; = :PRENUME, &quot;FUNCTIE&quot; = :FUNCTIE, &quot;SALARNEGOCIAT&quot; = :SALARNEGOCIAT, &quot;SALARREALIZAT&quot; = :SALARREALIZAT, &quot;VECHIME&quot; = :VECHIME, &quot;SPOR&quot; = :SPOR, &quot;PREMIIBRUTE&quot; = :PREMIIBRUTE, &quot;COMPENSATIE&quot; = :COMPENSATIE, &quot;TOTALBRUT&quot; = :TOTALBRUT, &quot;BRUTIMPOZABIL&quot; = :BRUTIMPOZABIL, &quot;IMPOZIT&quot; = :IMPOZIT, &quot;CAS&quot; = :CAS, &quot;SOMAJ&quot; = :SOMAJ, &quot;SANATATE&quot; = :SANATATE, &quot;AVANS&quot; = :AVANS, &quot;RETINERI&quot; = :RETINERI, &quot;RESTPLATA&quot; = :RESTPLATA WHERE &quot;NRCRT&quot; = :NRCRT">
         <SelectParameters>
             <asp:ControlParameter ControlID="tbNrCrt" Name="NrCrt1" PropertyName="Text" Type="Decimal" DefaultValue="0" />
         </SelectParameters>
